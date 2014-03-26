@@ -9,31 +9,37 @@ html
     link(href='css/style.css', rel='stylesheet', type='text/css')
     link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet', type='text/css')
   body
-    #topbar
-      .container.text-center
-        a.logo(href='/') 「打。道。掛。」<br>三動作護台灣
+    #topbar.text-center
       .contribute.pull-right
         button(class="btn btn-default" onclick="location.href='http://github.com/chilijung/ly-tel'")
           | 程式碼
-    .wrapper
-      .sidebar
+
+      a.logo(href='/') 「打。道。掛。」<br>三動作護台灣
+
+
+    //- Fixed-position bottom bar in mobile
+    .bottombar.visible-xs: .container: ul.row
+      li.col-xs-4: a(href='#teach')
+        span.glyphicon.glyphicon-bullhorn
+        br
+        | 三動作
+      li.col-xs-4: a(href='#ly')
+        span.glyphicon.glyphicon-th-list
+        br
+        | 名單列表
+      li.col-xs-4: a(href='#ly-map')
+        span.glyphicon.glyphicon-map-marker
+        br
+        | 地圖列表
+
+    //- Centered wrapper
+    .container: .row
+
+      //- The sidebar will go affix.
+      .sidebar.col-sm-4
         include ./switch
 
-      .bottombar.visible-xs: .container: ul.row
-        li.col-xs-4: a(href='#teach')
-          span.glyphicon.glyphicon-bullhorn
-          br
-          | 三動作
-        li.col-xs-4: a(href='#ly')
-          span.glyphicon.glyphicon-th-list
-          br
-          | 名單列表
-        li.col-xs-4: a(href='#ly-map')
-          span.glyphicon.glyphicon-map-marker
-          br
-          | 地圖列表
-
-      main#main.container
+      main#main.col-sm-8
         include:md ../md/step.md
 
         h1#ly 立委列表

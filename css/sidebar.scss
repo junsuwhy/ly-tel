@@ -5,18 +5,16 @@
 //     right:1px;
 // }
 ul#links{
-  @media only screen and (max-width: 760px){
+  @media only screen and (max-width: 767px){
     background-color: yellow;
   }
 }
 .sidebar {
-  @media only screen and (max-width: 760px){
+  @media only screen and (max-width: 767px){
     padding: 0 16px;
     margin-left: 0;
   }
-  margin-left: 42px;
-  margin-top: 44px;
-  float: left;
+  margin-top: 42px;
   text-decoration: none;
   h2 {
     margin-top: 5px;
@@ -62,8 +60,15 @@ ul#links{
 
 .sidebar.affix{
   top: 0;
-  @media only screen and (max-width: 760px){
-    position: static !important;
+  position: static !important;
+  @media only screen and (min-width: 768px){
+    position: fixed !important;
+
+    // When sidebar goes "affix", offset #main
+    & + #main {
+      // Same as .col-sm-offset-4
+      margin-left: (100%)/12*4;
+    }
   }
 }
 
@@ -74,8 +79,10 @@ ul#links{
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(#fff, .75);
+  background: rgba(#fff, .9);
   text-align: center;
+
+  border-top: 1px #ccc solid;
 
   // Override default <ul> styles
   ul{

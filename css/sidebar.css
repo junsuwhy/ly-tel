@@ -1,14 +1,12 @@
 /* side bar */
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 767px) {
   ul#links {
     background-color: yellow; } }
 
 .sidebar {
-  margin-left: 42px;
-  margin-top: 44px;
-  float: left;
+  margin-top: 42px;
   text-decoration: none; }
-  @media only screen and (max-width: 760px) {
+  @media only screen and (max-width: 767px) {
     .sidebar {
       padding: 0 16px;
       margin-left: 0; } }
@@ -51,10 +49,13 @@
   padding-top: 3px; }
 
 .sidebar.affix {
-  top: 0; }
-  @media only screen and (max-width: 760px) {
+  top: 0;
+  position: static !important; }
+  @media only screen and (min-width: 768px) {
     .sidebar.affix {
-      position: static !important; } }
+      position: fixed !important; }
+      .sidebar.affix + #main {
+        margin-left: 33.33333%; } }
 
 .bottombar {
   z-index: 1;
@@ -62,8 +63,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.75);
-  text-align: center; }
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  border-top: 1px #ccc solid; }
   .bottombar ul {
     padding-left: 0;
     list-style-type: none;

@@ -107,6 +107,9 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
 
 #results article {
   padding: 0.5em 0; }
+  #results article img.img-circle {
+    width: 32px;
+    height: 32px; }
   @media only screen and (max-width: 767px) {
     #results article h1, #results article h2 {
       display: inline-block;

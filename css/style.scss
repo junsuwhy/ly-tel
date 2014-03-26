@@ -6,13 +6,6 @@
 body,h1,h2,h3,h4,h5,h6,p,ul,ol{
     margin:0px;
     padding:0px;}
-#all-wrap{
-  width:100%;
-    max-width:960px;
-    margin:auto;
-    padding:20px 0;
-    position:relative;
-}
 
 .loading{
   margin: 5em;
@@ -30,8 +23,22 @@ body,h1,h2,h3,h4,h5,h6,p,ul,ol{
 }
 
 #results article{
-    padding: 0.5em 0;
-  @media only screen and (max-width: 760px){
+  padding: 0.5em 0;
+
+  @media only screen and (max-width: 767px){
+    h1, h2{
+      // Mobile view: put h1, h2 in a line
+      display: inline-block;
+      padding-left: 10px;
+      vertical-align: middle;
+      margin: 0;
+      line-height: 1.2;
+    }
+    header{
+      // Add margin in mobile view
+      margin-bottom: 0.5em;
+    }
+
     &:before{
       display:block !important;
     }
@@ -42,12 +49,6 @@ body,h1,h2,h3,h4,h5,h6,p,ul,ol{
     }
     header{
       width:80% !important;
-      h1{
-        width:50%;
-      }
-      h2{
-        width:50%;
-      }
     }
   }
 }
@@ -58,6 +59,18 @@ body,h1,h2,h3,h4,h5,h6,p,ul,ol{
 
 #results .contact{
   margin-top: 0.5em;
+
+  .glyphicon-earphone{
+    color: #fff;
+    background: #f00;
+    border-radius: 100px;
+    display: inline-block;
+    padding: 0.25em;
+  }
+
+  .tel{
+    font-size: 16px;
+  }
 }
 #results .contact:first-child{
   margin-top: 0em;
@@ -69,83 +82,52 @@ body,h1,h2,h3,h4,h5,h6,p,ul,ol{
   font-weight: bold;
 }
 
-.copyright{
-text-align:center;
-font-size:13px;
-padding:10px;
-line-height:1.4em;
-}
-
 #topbar {
-  background: #3a3939;
-  height: 67px;
-  text-align: center;
-  .topbar-content{
-    padding-top: 23px;
-  }
+  background: #ffa100;
+  padding: 0.75em;
 }
 #topbar .logo {
-  font-size: 30px;
-  @media only screen and (max-width: 760px){
-    font-size: 25px;
-  }
-  line-height: 1;
+  font-size: 24px;
+  color: #2b2b2b;
+  line-height: 1.2;
   letter-spacing: 1px;
   text-decoration: none;
-  color: #FFF;
 }
 #topbar .logo:hover {
-  color: #878585;
-}
-#topbar .social-btn-group {
-  overflow: hidden;
-  border: none;
-  padding-top: 23px;
-  z-index: 9999;
-  float: right;
-  display: inline-flex;
-  height: inherit;
-}
-#topbar .fb-btn, #topbar .tw-btn, #topbar .gp-btn {
-  height: 21px;
-}
-#topbar .fb-btn {
-  width: 130px;
-  -webkit-filter: grayscale(100%) contrast(60%);
-  -moz-filter: grayscale(100%) contrast(60%);
-  filter: grayscale(100%) contrast(60%);
-}
-#topbar .tw-btn {
-  width: 80px;
-  margin-right: 14px;
-  -webkit-filter: grayscale(100%) contrast(60%);
-  -moz-filter: grayscale(100%) contrast(60%);
-  filter: grayscale(100%) contrast(60%);
-}
-#topbar .gp-btn {
-  width: 100px;
-  margin-right: 23px;
-  -webkit-filter: grayscale(100%) contrast(60%);
-  -moz-filter: grayscale(100%) contrast(60%);
-  filter: grayscale(100%) contrast(60%);
-}
-#topbar .beta-string {
-  margin: 16px 0 0 32px;
-  padding: 5px 10px;
-  border: 1px solid rgba(217, 83, 79, 0.4);
-  border-radius: 3px;
+  color: lighten(#2b2b2b, 10%);
 }
 
 /* main */
 
 #main {
+  #text-instruction {
+    display: block;
+  }
 
-  @media only screen and (min-width: 760px){
-    padding-left: 22em;
-    margin-top: 3em;
+  #img-instruction {
+    display: none;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 768px){
+    margin-top: 24px;
+    #text-instruction {
+      display: none;
+    }
+    #img-instruction {
+      display: block;
+    }
   }
   // width: 51em;
 }
+
+#map{
+  width: 100%;
+  height: 500px;
+}
+
 /*main .head {
   font-size: 50px;
 }
@@ -184,17 +166,26 @@ main .md h2 {
 }
 main .md p {
   font-size: 17px;
-}*/
+}
+
+*/
 
 
 
 /* footer */
 #footer {
+  margin-top: 36px;
+  padding: 36px 0;
+  clear: both;
   position: relative;
   background-color: #3a3939;
   color: #c7c7c7;
-  height: 100px;
+  // height: 100px;
   overflow: hidden;
+}
+#footer .container {
+  padding: 0 16px;
+  max-width: 760px;
 }
 
 #footer a {
@@ -202,18 +193,28 @@ main .md p {
 }
 
 #footer .copyright {
-  line-height: 100px;
+  font-size:13px;
+  line-height:1.4em;
   margin: 0;
+  text-align: center;
+}
+#footer .copyright img {
+  // line-height: 100px;
+  display: block;
+  margin: 0 auto 12px;
 }
 #footer .copyright span {
   vertical-align: middle;
-  margin-left: 20px;
   letter-spacing: 1px;
   line-height: 1.5;
   font-size: 12px;
   display: inline-block;
 }
+#footer .footer-logo {
+  margin-bottom: 12px;
+}
 #footer .g0v {
+  display: block;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -223,5 +224,23 @@ main .md p {
   background-position: 50% 50%;
   width: 173px;
   height: 32px;
-  height: 100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 767px) {
+  #footer .copyright {
+    text-align: left;
+  }
+  #footer .copyright img {
+  line-height: 32px;
+  margin-bottom: 0;
+  display: inline-block;
+}
+  #footer .copyright span {
+
+  }
+  #footer .footer-logo {
+    margin-bottom: 0;
+    float: right;
+  }
 }

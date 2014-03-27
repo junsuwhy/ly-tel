@@ -25,6 +25,10 @@ body,h1,h2,h3,h4,h5,h6,p,ul,ol{
 #results article{
   padding: 0.5em 0;
 
+  img.img-circle {
+    width: 32px;
+    height: 32px;
+  }
   @media only screen and (max-width: 767px){
     h1, h2{
       // Mobile view: put h1, h2 in a line

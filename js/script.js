@@ -42,7 +42,10 @@ var constituencyParser = function (constituency) {
     case 'proportional':
         return '全國不分區';
     case 'aborigine':
-        return '山地原住民';
+        if (constituency[1] == 'highland')
+            return '山地原住民';
+        else
+            return '平地原住民';
     case 'foreign':
         return '僑居國外國民';
     default:
@@ -133,10 +136,10 @@ function showResults(){
         html +=     '<h2><small>' + partyParser(val['party']) + '<br>' + constituencyParser(val['constituency']) + '</small></h2>';
         html +=   '</header>';
 
-        var contact = val['contact'];
+        var contacts = val['contacts'] || [];
         html += '<main class="col-xs-12 col-sm-8">';
-        $.each(contact, function (key, val) {
-            key = $.trim(key);
+        $.each(contacts, function (key, val) {
+            key = val['name'];
             if(key){
                 html = html + '<div class="contact"><h3>' + key + '</h3>';
                 if (val['phone'] != undefined){

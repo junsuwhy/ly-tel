@@ -24,6 +24,7 @@ $ gulp # this will render html file from jade
 - [@MrOrz](https://github.com/MrOrz)
 - [@shengli1989](https://github.com/shengli1989)
 - [@audreyt](https://github.com/audreyt)
+- [@clkao](https://github.com/clkao)
 
 #### 三動作圖片 License 
 

@@ -128,16 +128,18 @@ function showResults(){
     var html = '';
     $.each(dataCache, function (key, val) {
         html += '<article class="row">';
-        html +=   '<div class="col-xs-1">'
-        html +=     '<img src="' + val['avatar'] + '" alt="' + val['name'] + '" class="img-circle">';
-        html +=   '</div>'
-        html +=   '<header class="col-xs-3">';
-        html +=     '<h1>' + val['name'] + '</h1>';
-        html +=     '<h2><small>' + partyParser(val['party']) + '<br>' + constituencyParser(val['constituency']) + '</small></h2>';
-        html +=   '</header>';
+        html +=   '<div class="ly-info">';
+        html +=     '<div class="col-xs-1 ly-avatar">';
+        html +=       '<img src="' + val['avatar'] + '" alt="' + val['name'] + '" class="img-circle">';
+        html +=     '</div>';
+        html +=     '<header class="col-xs-3 ly-title">';
+        html +=       '<h1>' + val['name'] + '</h1>';
+        html +=       '<h2><small>' + partyParser(val['party']) + '<br>' + constituencyParser(val['constituency']) + '</small></h2>';
+        html +=     '</header>';
+        html +=   '</div>';
 
         var contacts = val['contacts'] || [];
-        html += '<main class="col-xs-12 col-sm-8">';
+        html += '<main class="col-xs-12 col-sm-8 ly-contact">';
         $.each(contacts, function (key, val) {
             key = val['name'];
             if(key){

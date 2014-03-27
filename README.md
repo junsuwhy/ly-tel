@@ -13,7 +13,7 @@ $ npm install
 using gulp
 
 ```
-$ gulp # this will render html file from jade
+$ gulp # this will render html file from jade and scss to css
 ```
 
 ## Contributors

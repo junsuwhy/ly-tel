@@ -46,15 +46,21 @@ html
       main#main.col-sm-8
         include:md ../md/step.md
 
+        hr
+
         h1#ly 立委列表
 
         #results
           p.loading.text-center
             img(src='images/loading.gif' alt='Loading...')
 
+        hr
+
         h1#ly-map 立委地圖
 
         iframe#map(src='https://www.google.com/fusiontables/embedviz?q=select+col6+from+1F8TIwQvWUxIDGE1vATrWVGt2GYosdsyYMCDx85Vr&viz=MAP&h=false&lat=24.214885144153676&lng=121.37062796562498&t=1&z=7&l=col6&y=2&tmplt=2&hml=ONE_COL_LAT_LNG')
+
+        hr
 
         h1#discuss 立委怎麼說？經驗分享
         div#disqus_thread
@@ -73,6 +79,8 @@ html
         a.dsq-brlink(href='http://disqus.com')
           | comments powered by
           span.logo-disqus Disqus
+
+        hr
 
         h1#report 功能新增與除錯建議
         div 

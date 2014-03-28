@@ -23,7 +23,7 @@ body,h1,h2,h3,h4,h5,h6,p,ul,ol{
 }
 
 #results article{
-  padding: 0.5em 0;
+  padding: 1.5em 0;
 
   img.img-circle {
     width: 32px;
@@ -51,16 +51,39 @@ body,h1,h2,h3,h4,h5,h6,p,ul,ol{
         display:inline-block;
       }
     }
-    header{
-      width:80% !important;
+
+    .ly-info {
+      float: left;
+      width: 30%;
     }
+    .ly-avatar,
+    .ly-title {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+    .ly-title {
+      h1, h2 {
+        padding: 0.3em 0;
+        display: block;
+      }
+    }
+    .ly-contact {
+      width: 70%;
+    }
+
+
   }
 }
 
 #results article:nth-child(2n){
   background: #eee;
 }
-
+#results .contact:nth-child(2n) {
+  border-top: 1px solid #E2E2E2;
+  margin-top: 0.7em;
+  padding-top: 0.7em;
+}
 #results .contact{
   margin-top: 0.5em;
 

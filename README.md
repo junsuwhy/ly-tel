@@ -13,7 +13,7 @@ $ npm install
 using gulp
 
 ```
-$ gulp # this will render html file from jade
+$ gulp # this will render html file from jade and scss to css
 ```
 
 ## Contributors
@@ -24,6 +24,8 @@ $ gulp # this will render html file from jade
 - [@MrOrz](https://github.com/MrOrz)
 - [@shengli1989](https://github.com/shengli1989)
 - [@audreyt](https://github.com/audreyt)
+- [@clkao](https://github.com/clkao)
+- [@IanWang](https://github.com/IanWang)
 
 #### 三動作圖片 License 
 

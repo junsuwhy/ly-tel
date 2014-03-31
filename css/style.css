@@ -178,6 +178,9 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
 #topbar .logo:hover {
   color: #454545; }
 
+#topbar .share {
+  width: 150px; }
+
 /* main */
 #main #text-instruction {
   display: block; }

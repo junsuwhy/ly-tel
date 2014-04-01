@@ -127,7 +127,7 @@ function showResults(){
 
     var html = '';
     $.each(dataCache, function (key, val) {
-        html += '<article class="row">';
+        html += '<article class="row" id="row' + key + '">';
         html +=   '<div class="ly-info">';
         html +=     '<div class="col-xs-1 ly-avatar">';
         html +=       '<img src="' + val['avatar'] + '" alt="' + val['name'] + '" class="img-circle">';
@@ -159,6 +159,10 @@ function showResults(){
         html += '</main></article>';
     });
     $('#results').append(html);
+    $('a[href="#row0"]').click(function (e) {
+        e.preventDefault();
+        $(document).scrollTop( $("#row" + Math.floor((Math.random()*dataCache.length))).offset().top );
+    });
 }
 
 $.getJSON(url, function (data) {

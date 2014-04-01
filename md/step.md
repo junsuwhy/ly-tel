@@ -54,6 +54,9 @@
         <a class="btn btn-warning btn-lg" href="#ly">
             查詢立委列表
         </a>
+        <a class="btn btn-warning btn-lg" href="#row0">
+            馬上選個立委
+        </a>
     </p>
      
     <a id="action3"></a>

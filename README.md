@@ -26,6 +26,7 @@ $ gulp # this will render html file from jade and scss to css
 - [@audreyt](https://github.com/audreyt)
 - [@clkao](https://github.com/clkao)
 - [@IanWang](https://github.com/IanWang)
+- [@shaform](https://github.com/shaform)
 
 #### 三動作圖片 License 
 

@@ -46,7 +46,6 @@
 
     $('#' + this.TITLE_ID).removeClass('sr-only');
 
-    window.removeEventListener('hashchange', this);
     this.$selectors = [];
 
     this.data.stop();
@@ -62,29 +61,12 @@
     this.repSelector = null;
   };
 
-  RepLocator.prototype.handleEvent = function(evt) {
-    this.updateLocationFromHash();
-  };
-
   RepLocator.prototype.handleDataReady = function() {
     this.repSelector.enableSelectors();
     this.locationResolver.enableButton();
-
-    if (window.location.hash.substr(1)) {
-      this.updateLocationFromHash();
-    }
-
-    window.addEventListener('hashchange', this);
   };
 
   RepLocator.prototype.updateLocation = function(addressPrefix) {
-    var validAddressPrefix =
-      this.data.getValidAddressPrefix(addressPrefix) || '';
-    window.location.hash = '#' + window.encodeURI(validAddressPrefix);
-  };
-
-  RepLocator.prototype.updateLocationFromHash = function() {
-    var addressPrefix = window.decodeURI(window.location.hash.substr(1));
     var validAddressPrefix =
       this.data.getValidAddressPrefix(addressPrefix) || '';
     this.repCard.showRepFromAddressPrefix(validAddressPrefix);

@@ -185,7 +185,7 @@ function showResults(){
         $.cookie('ly-' + lyId + '-reported', 'true');
         $(this).addClass('btn-success disabled').removeClass('btn-warning');
         if (lyId in reportCache) {
-            showReportNum(lyId, reportCache[lyId]+1);
+            showReportNum(lyId, parseInt(reportCache[lyId])+1);
         } else {
             showReportNum(lyId, 1);
         }

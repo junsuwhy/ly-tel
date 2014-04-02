@@ -11,6 +11,7 @@ html
     meta(property="og:image" content="/images/step/step1.png")
     link(rel="shortcut icon" href="/images/favicon.ico")
     link(href='css/style.css', rel='stylesheet', type='text/css')
+    link(href='css/locate.css', rel='stylesheet', type='text/css')
     link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet', type='text/css')
   body
     #topbar.text-center
@@ -70,7 +71,22 @@ html
 
         h1#ly-locate 尋找選區立委
 
-        iframe#locator(src='http://timdream.org/rep-locator/')
+        form.form-inline(role='form')
+          p.text-center
+            span.form-group
+              label.sr-only(for='address-selector0') 縣市
+              select#address-selector0.address-selector.form-control.input-lg(disabled='disabled', title='縣市')
+            span.form-group
+              label.sr-only(for='address-selector1') 鄉鎮市區
+              select#address-selector1.address-selector.form-control.input-lg(disabled='disabled', title='鄉鎮市區')
+            span.form-group
+              label.sr-only(for='address-selector2') 村里
+              select#address-selector2.address-selector.form-control.input-lg(disabled='disabled', title='村里')
+        p#locate-me-block.text-center
+          button#locate-me.btn.btn-info.btn-lg(disabled='disabled')
+            | 定位所在位置
+            span#looking-up-location.glyphicon.glyphicon-refresh
+        #reps
 
         hr
 
@@ -132,6 +148,12 @@ html
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
     script(src='js/script.js')
+    script(type='text/javascript', src='js/locate/rep_data.js', defer='defer')
+    script(type='text/javascript', src='js/locate/rep_card.js', defer='defer')
+    script(type='text/javascript', src='js/locate/rep_selector.js', defer='defer')
+    script(type='text/javascript', src='js/locate/location_resolver.js', defer='defer')
+    script(type='text/javascript', src='js/locate/app.js', defer='defer')
+    script(type='text/javascript', src='js/locate/start.js', defer='defer')
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

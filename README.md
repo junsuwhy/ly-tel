@@ -27,10 +27,19 @@ $ gulp # this will render html file from jade and scss to css
 - [@clkao](https://github.com/clkao)
 - [@IanWang](https://github.com/IanWang)
 - [@shaform](https://github.com/shaform)
+- [@timdream](https://github.com/timdream)
 
 #### 三動作圖片 License 
 
 - 三動作護台灣由 @ChangeLin 製作，以創用CC 姓名標示-非商業性 4.0 國際 授權條款釋出。
+
+#### 定位尋找區域立委
+
+由 @timdream 所開發
+
+see also:
+
+https://github.com/timdream/rep-locator
 
 ## Thanks 
 

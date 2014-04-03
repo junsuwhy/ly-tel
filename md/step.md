@@ -63,18 +63,8 @@
     <img src="/images/step/step3.png"/>
 </div>
 
-<a id="link"></a>
-### 民間版「兩岸協定締結條例內容」
-
-[檔案連結](https://docs.google.com/file/d/0B6meUyeFIFA8N2VaX3FvNWYzWlU/edit)
-
 <blockquote class="text-warning">
     說個要訣：這不是要說服也不是討論，這是施壓。對方會試圖用各種旁支末節來分散焦點，建議直接把要說的說完就好。記住，立委是公僕，加油！
 </blockquote>
 
 ----
-
-<a id="act-link"></a>
-### 行政院版本兩岸協議監督條例
-
-[檔案連結](http://audreyt.org/tmp/103.04.03-5-28.clearscan.pdf)

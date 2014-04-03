@@ -5,7 +5,8 @@
 
 .sidebar {
   margin-top: 42px;
-  text-decoration: none; }
+  text-decoration: none;
+  overflow: scroll; }
   @media only screen and (max-width: 767px) {
     .sidebar {
       padding: 0 16px;
@@ -178,6 +179,9 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
 #topbar .logo:hover {
   color: #454545; }
 
+#topbar .share {
+  width: 150px; }
+
 /* main */
 #main #text-instruction {
   display: block; }
@@ -192,6 +196,10 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
       display: none; }
     #main #img-instruction {
       display: block; } }
+
+#locator {
+  width: 100%;
+  height: 600px; }
 
 #map {
   width: 100%;

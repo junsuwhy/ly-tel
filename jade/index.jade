@@ -11,12 +11,20 @@ html
     meta(property="og:image" content="/images/step/step1.png")
     link(rel="shortcut icon" href="/images/favicon.ico")
     link(href='css/style.css', rel='stylesheet', type='text/css')
+    link(href='css/locate.css', rel='stylesheet', type='text/css')
     link(href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet', type='text/css')
   body
     #topbar.text-center
       .contribute.pull-right
         button(class="btn btn-default" onclick="location.href='http://github.com/chilijung/ly-tel'")
           | 程式碼
+        .share.a2a_kit.a2a_kit_size_32.a2a_default_style
+          a.a2a_dd(href='http://www.addtoany.com/share_save')
+          a.a2a_button_facebook
+          a.a2a_button_twitter
+          a.a2a_button_google_plus
+        script(type='text/javascript', src='//static.addtoany.com/menu/page.js')
+
 
       a.logo(href='/') 「打。道。掛。」<br>三動作護台灣
 
@@ -48,6 +56,11 @@ html
 
         hr
 
+        h1#others 還可以怎麼說？
+        include:md ../md/others.md
+
+        hr
+
         h1#ly 立委列表
 
         #results
@@ -56,11 +69,66 @@ html
 
         hr
 
+        h1#ly-locate 尋找選區立委
+
+        form.form-inline(role='form')
+          p.text-center
+            span.form-group
+              label.sr-only(for='address-selector0') 縣市
+              select#address-selector0.address-selector.form-control.input-lg(disabled='disabled', title='縣市')
+            span.form-group
+              label.sr-only(for='address-selector1') 鄉鎮市區
+              select#address-selector1.address-selector.form-control.input-lg(disabled='disabled', title='鄉鎮市區')
+            span.form-group
+              label.sr-only(for='address-selector2') 村里
+              select#address-selector2.address-selector.form-control.input-lg(disabled='disabled', title='村里')
+        p#locate-me-block.text-center
+          button#locate-me.btn.btn-info.btn-lg(disabled='disabled')
+            | 定位所在位置
+            span#looking-up-location.glyphicon.glyphicon-refresh
+        #reps
+        p.text-center
+          | 地理定位使用&nbsp;
+          a(href="http://www.openstreetmap.org/",target="_blank")
+            | OpenStreetMap
+          | &nbsp;。
+
+        hr
+
+        h1#ly-state 立委「先立法，再審查」承諾書繳交情形列表
+
+        a(href="http://web.ntnu.edu.tw/~60132057A/FuMou/", target="_blank")
+          h4 承諾書繳交情形列表
+
+        hr
+
         h1#ly-map 立委地圖
 
         iframe#map(src='https://www.google.com/fusiontables/embedviz?q=select+col6+from+1F8TIwQvWUxIDGE1vATrWVGt2GYosdsyYMCDx85Vr&viz=MAP&h=false&lat=24.214885144153676&lng=121.37062796562498&t=1&z=7&l=col6&y=2&tmplt=2&hml=ONE_COL_LAT_LNG')
 
         hr
+
+        h1#ly-more
+
+        a(href="http://vote.ly.g0v.tw/", target="_blank")
+          | 立委投票指南
+
+        h1#contract 兩岸協議監督條例
+
+        a#act-ver1(href="http://bit.ly/1pS4qov", target="_blank")
+          h4 行政院版 (版本一)
+
+        a#act-ver2(href="http://bit.ly/QHCR5s", target="_blank")
+          h4 行政院版 (版本二)
+
+        a#ding-ver(href="http://ly.g0v.tw/bills/1374L15430", target="_blank")
+          h4 鄭麗君版
+
+        a#DPP-ver(href="http://ly.g0v.tw/bills/1374L16070", target="_blank")
+          h4 民進黨黨團版 
+
+        a#yao-ver(href="http://ly.g0v.tw/bills/1374L15231", target="_blank")
+          h4 姚文智版
 
         h1#discuss 立委怎麼說？經驗分享
         div#disqus_thread
@@ -83,10 +151,10 @@ html
         hr
 
         h1#report 功能新增與除錯建議
-        div 
-          | 如果有什麼建議加上的功能可以在 
+        div
+          | 如果有什麼建議加上的功能可以在&nbsp;
           a(href="https://github.com/chilijung/ly-tel/issues/new" target="_bland")
-            | github 上開一個新 issue
+            | GitHub 上開一個新 issue
           | ，更希望能夠有人能夠自己動手做，在送一個 Request 給本專案，方便更新謝謝。
     footer#footer
       .container
@@ -113,12 +181,20 @@ html
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js')
     script(src='js/script.js')
+    script(type='text/javascript', src='js/locate/rep_data.js', defer='defer')
+    script(type='text/javascript', src='js/locate/rep_card.js', defer='defer')
+    script(type='text/javascript', src='js/locate/rep_selector.js', defer='defer')
+    script(type='text/javascript', src='js/locate/location_resolver.js', defer='defer')
+    script(type='text/javascript', src='js/locate/app.js', defer='defer')
+    script(type='text/javascript', src='js/locate/start.js', defer='defer')
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-38980669-2', 'lijung.com');
+      ga('create', 'UA-41326468-1', 'g0v.today');
       ga('send', 'pageview');
+
 

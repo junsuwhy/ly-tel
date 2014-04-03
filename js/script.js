@@ -6,6 +6,7 @@
 "use strict";
 
 var dataCache;
+var reportCache = {};
 var url = "data/mly-8.json";
 
 var iso3166tw = {
@@ -107,6 +108,13 @@ var partyParser = function (party) {
 //     //showResults();
 // });
 
+function showReportNum(lyId, reportNum){
+    var reportNumSpan = $('.btn-report.btn-success[data-ly="'+ lyId +'"]');
+    if (reportNumSpan) {
+        reportNumSpan.find('.report-num').text(reportNum + ' 人');
+    }
+}
+
 function showResults(){
     $('#results').html('');
     /*
@@ -127,10 +135,18 @@ function showResults(){
 
     var html = '';
     $.each(dataCache, function (key, val) {
-        html += '<article class="row" id="row' + key + '">';
-        html +=   '<div class="ly-info">';
+        html += '<article class="row" id="ly-' + val['id'] + '">';
+        html +=   '<div class="ly-info';
         html +=     '<div class="col-xs-1 ly-avatar">';
         html +=       '<img src="' + val['avatar'] + '" alt="' + val['name'] + '" class="img-circle">';
+
+        var reported = $.cookie('ly-' + val['id'] + '-reported');
+        if (reported) {
+            html +=       '<div class="btn btn-success btn-sm btn-report disabled" data-ly="' + val['id'] +'"><span class="glyphicon glyphicon-ok"></span> <span class="report-num"></span>回報已打</div>';
+        } else {
+            html +=       '<div class="btn btn-warning btn-sm btn-report" data-ly="' + val['id'] +'"><span class="glyphicon glyphicon-ok"></span> <span class="report-num"></span>回報已打</div>';
+        }
+
         html +=     '</div>';
         html +=     '<header class="col-xs-3 ly-title">';
         html +=       '<h1>' + val['name'] + '</h1>';
@@ -159,9 +175,37 @@ function showResults(){
         html += '</main></article>';
     });
     $('#results').append(html);
-    $('a[href="#row0"]').click(function (e) {
+    $('a[href="#ly-id"]').click(function (e) {
         e.preventDefault();
-        $(document).scrollTop( $("#row" + Math.floor((Math.random()*dataCache.length))).offset().top );
+        $(document).scrollTop( $("#ly-" + dataCache[Math.floor((Math.random()*dataCache.length))]['id']).offset().top );
+    });
+    // report button
+    $('.btn-report.btn-warning').click(function (e) {
+        var lyId = $(this).data('ly');
+        $.cookie('ly-' + lyId + '-reported', 'true');
+        $(this).addClass('btn-success disabled').removeClass('btn-warning');
+        if (lyId in reportCache) {
+            showReportNum(lyId, parseInt(reportCache[lyId])+1);
+        } else {
+            showReportNum(lyId, 1);
+        }
+        $.ajax({
+            url: 'https://docs.google.com/forms/d/1rFUdVAm2YPmNPFJw5hf5qOlqT-kWh8nflT3YKTHd_I0/formResponse',
+            data: {'entry.1839673598': lyId},
+            type: 'POST',
+            dataType: 'xml'
+        });
+    });
+    $.ajax({
+        url: 'https://spreadsheets.google.com/tq?&tq=select%20B%2C%20count(A)%20group%20by%20B&key=0AoqU8WuJgsBmdF9ORjB5OHZTeWlSbXA0eGVQeVprX2c&gid=3&tqx=out:html',
+        success: function (result) {
+            $($.parseHTML(result)).find('tr').each(function () {
+                var lyId = $(this).find('td').first().text();
+                var reportNum = $(this).find('td').last().text();
+                reportCache[lyId] = reportNum;
+                showReportNum(lyId, reportNum);
+            });
+        }
     });
 }
 

@@ -54,7 +54,7 @@
         <a class="btn btn-warning btn-lg" href="#ly">
             查詢立委列表
         </a>
-        <a class="btn btn-warning btn-lg" href="#row0">
+        <a class="btn btn-warning btn-lg" href="#ly-id">
             馬上選個立委
         </a>
     </p>

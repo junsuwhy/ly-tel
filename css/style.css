@@ -5,7 +5,8 @@
 
 .sidebar {
   margin-top: 42px;
-  text-decoration: none; }
+  text-decoration: none;
+  overflow: scroll; }
   @media only screen and (max-width: 767px) {
     .sidebar {
       padding: 0 16px;

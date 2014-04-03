@@ -48,7 +48,9 @@ html
     .container: .row
 
       //- The sidebar will go affix.
-      .sidebar.col-sm-4
+      input(type="checkbox", id="menu")
+      label(for="menu", onclick)
+      nav.sidebar(role="off-canvas").col-sm-4
         include ./switch
 
       main#main.col-sm-8
@@ -125,7 +127,7 @@ html
           h4 鄭麗君版
 
         a#DPP-ver(href="http://ly.g0v.tw/bills/1374L16070", target="_blank")
-          h4 民進黨黨團版 
+          h4 民進黨黨團版
 
         a#yao-ver(href="http://ly.g0v.tw/bills/1374L15231", target="_blank")
           h4 姚文智版

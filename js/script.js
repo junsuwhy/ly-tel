@@ -213,8 +213,26 @@ $.getJSON(url, function (data) {
     dataCache=data;
     showResults();
 });
-
-$('.sidebar').affix({
-    offset: {top: 80}
-});
+//while not small device, execute this
+if($(window).width()>767){
+    $('.sidebar').affix({
+        offset: {top: 80}
+    });
+}
 }(window, document, jQuery));
+function clickMenu(){
+    if($('#menu').prop('checked')){
+        $('#main').css('overflow', 'hidden');
+        //remove bottombar when click sidebar
+        $('.bottombar').removeClass('visible-xs').css('display','none');
+    }else{
+        $('.bottombar').addClass('visible-xs');
+    }
+}
+$('#menu').click(function(){
+    clickMenu();
+});
+$('.sidebar ul li').click(function(){
+    $('#menu').prop("checked", false);
+    clickMenu();
+});

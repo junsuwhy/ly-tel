@@ -5,3 +5,14 @@
 .center{
     text-align: center;
 }
+
+@mixin transition-duration($time){
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: $time;
+    -o-transition-duration: $time;
+    -webkit-transition-duration: $time;
+    transition-duration: $time;
+}

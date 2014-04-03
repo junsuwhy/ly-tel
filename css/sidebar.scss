@@ -1,8 +1,10 @@
+@import 'var';
 ul#links{
   @media only screen and (max-width: 767px){
     background-color: yellow;
   }
 }
+
 .sidebar {
   @media only screen and (max-width: 767px){
     padding: 0 16px;
@@ -97,4 +99,62 @@ ul#links{
   .glyphicon{
     font-size: 150%;
   }
+}
+
+//sidebar - small screen
+input{
+  display:none;
+}
+@media only screen and (max-width: 767px){
+    $menu-width:20em;
+    $content-offset:.5em;
+    .sidebar{
+      // margin-top: 1em;
+    }
+    nav[role="off-canvas"]{
+        position:absolute;
+        top:3em;
+        left:-$menu-width;
+        width:$menu-width;
+        opacity:0;
+        ul > li{
+            height:100%;
+            width:100%;
+            text-align: left;
+            margin:0;
+        }
+    }
+    label{
+        display:block;
+        cursor:pointer;
+        &:after{
+        position:absolute;
+        top:.5em;
+        left:.5em;
+        z-index: 5;
+            content:"\2261";
+            font-size:1.8em;
+        }
+    }
+    label:hover, input:checked ~ label{
+        color:#000;
+    }
+
+    input:checked ~ nav[role="off-canvas"]{
+        @include transition-duration(.6s);
+        opacity:1;
+        left:0;
+        top:13%;
+        ul > li{
+            padding: .2em .55em .2em 1.5em;
+        }
+    }
+    input:checked ~ .bottombar{
+      display:none;
+    }
+    input:checked ~ main{
+        @include transition-duration(.6s);
+        margin-left: $menu-width+$content-offset;
+        margin-right: -($menu-width+$content-offset);
+    }
 }

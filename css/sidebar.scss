@@ -12,7 +12,6 @@ ul#links{
   }
   margin-top: 42px;
   text-decoration: none;
-  overflow: scroll;
   h2 {
     margin-top: 5px;
   }
@@ -155,6 +154,7 @@ input{
     input:checked ~ main{
         @include transition-duration(.6s);
         margin-left: $menu-width+$content-offset;
-        margin-right: -($menu-width+$content-offset);
+        opacity:0;
+        // margin-right: -($menu-width+$content-offset);
     }
 }

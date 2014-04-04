@@ -11,8 +11,7 @@
 
 .sidebar {
   margin-top: 42px;
-  text-decoration: none;
-  overflow: scroll; }
+  text-decoration: none; }
   @media only screen and (max-width: 767px) {
     .sidebar {
       padding: 0 16px;
@@ -139,7 +138,7 @@ input {
     -webkit-transition-duration: 0.6s;
     transition-duration: 0.6s;
     margin-left: 20.5em;
-    margin-right: -20.5em; } }
+    opacity: 0; } }
 
 .centered {
   float: none;

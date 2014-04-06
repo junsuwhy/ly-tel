@@ -215,8 +215,16 @@ $.getJSON(url, function (data) {
 });
 //while not small device, execute this
 if($(window).width()>767){
-    $('.sidebar').affix({
-        offset: {top: 80}
+    var offset = $(".sidebar").offset();
+    var topPadding = 50;
+    $(window).scroll(function() {
+        if($(window).scrollTop()  > 37829){
+            $(".sidebar").css("margin-top", 37829);
+        }else if ($(window).scrollTop() > offset.top) {
+            $(".sidebar").css("margin-top", $(window).scrollTop() - offset.top + topPadding);
+        }else {
+            $(".sidebar").css("margin-top", 20);
+        };
     });
 }
 }(window, document, jQuery));

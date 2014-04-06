@@ -218,8 +218,8 @@ if($(window).width()>767){
     var offset = $(".sidebar").offset();
     var topPadding = 50;
     $(window).scroll(function() {
-        if($(window).scrollTop()  > 37829){
-            $(".sidebar").css("margin-top", 37829);
+        if($(window).scrollTop()  > 47000){
+            $(".sidebar").css("margin-top", 47000);
         }else if ($(window).scrollTop() > offset.top) {
             $(".sidebar").css("margin-top", $(window).scrollTop() - offset.top + topPadding);
         }else {

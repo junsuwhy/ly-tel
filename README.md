@@ -16,6 +16,15 @@ using gulp
 $ gulp # this will render html file from jade and scss to css
 ```
 
+### git submodule
+
+「尋找選區立委」要正常使用請拉取 git submodule
+
+```
+$ git submodule init
+$ git submodule update
+```
+
 ## Contributors
 
 #### Developers

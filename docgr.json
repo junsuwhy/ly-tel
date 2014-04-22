@@ -1,0 +1,220 @@
+[{
+	"layout": "./template/default.hbs",
+	"filename": "index.html",
+	"basic": {
+		"title": "「123。打。道。掛。」三動作護台灣",
+		"og_title": "「123。打。道。掛。」三動作護台灣",
+		"og_site_name": "「123。打。道。掛。」三動作護台灣",
+		"og_url": "opendata.datagarage.io",
+		"og_description": "「123。打。道。掛。」三動作護台灣",
+		"og_image": "/images/step/step1.png",
+		"author": "chilijung",
+		"viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+		"shortcut_icon": "/images/favicon.ico",
+
+		"scripts": [
+			"https://code.jquery.com/jquery-1.11.0.min.js",
+			"js/locate/assets/rep_data.js",
+			"js/locate/assets/rep_card.js",
+			"js/locate/assets/rep_selector.js",
+			"js/locate/assets/location_resolver.js",
+			"js/locate/assets/app.js",
+			"js/locate-start.js",
+			"//static.addtoany.com/menu/page.js",
+			"//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js",
+			"js/script.js",
+			"//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"
+		],
+
+		"stylesheets": [
+			"http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css",
+			"css/style.css",
+			"css/locate.css"
+		],
+
+		"disqus": "tisa-ly",
+
+		"google_analytics": {
+			"UA": "UA-49242122-1", 
+			"url": "datagarage.io"
+		},
+
+		"bottom_bar": [
+			{
+				"href": "teach",
+				"class": "glyphicon-bullhorn",
+				"title": "三動作"
+			},
+			{
+				"href": "ly",
+				"class": "glyphicon-th-list",
+				"title": "名單列表"
+			},
+			{
+				"href": "ly-discuss",
+				"class": "glyphicon-group",
+				"title": "經驗分享"
+			}
+		],
+
+		"side_bar": [
+			{
+				"href": "teach",
+				"title": "三動作",
+				"sub": [
+					{
+						"href": "action1",
+						"title": "動作一"
+					},
+					{
+						"href": "action2",
+						"title": "動作二"
+					},
+					{
+						"href": "action3",
+						"title": "動作三"
+					}
+
+				]
+			},
+
+			{
+				"href": "others",
+				"title": "還可以怎麼說？",
+				"sub": [
+					{
+						"href": "citizen",
+						"title": "民意篇"
+					}
+				]
+			},
+
+			{
+				"href": "ly",
+				"title": "找立委",
+				"sub": [
+					{
+						"href": "ly-list",
+						"title": "立委列表"
+					},
+
+					{
+						"href": "ly-locate",
+						"title": "尋找選區立委"
+					},
+
+					{
+						"href": "ly-more",
+						"title": "想更了解你的立委？"
+					}
+				]
+			},
+
+			{
+				"href": "discuss",
+				"title": "立委怎麼說？經驗分享"
+			},
+
+			{
+				"href": "contract",
+				"title": "兩岸協議監督條例",
+				"sub": [
+					{
+						"href": "local-ver",
+						"title": "民間版「兩岸協定締結條例內容」"
+					},
+
+					{
+						"href": "act-ver",
+						"title": "行政院版本兩岸協議監督條例"
+					},
+					{
+						"href": "ding-ver",
+						"title": "鄭麗君版"
+					},
+					{
+						"href": "DPP-ver",
+						"title": "民進黨黨團版"
+					},
+					{
+						"href": "yao-ver",
+						"title": "姚文智版"
+					}
+				]
+			},
+
+			{
+				"href": "report",
+				"title": "功能新增與除錯建議"
+			}
+		],
+
+		"block": [
+			{
+				"title": "Open Data",
+				"anchor": "common",
+				"md": "./lang/en/common/common.md",
+
+				"sub": [
+					{
+						"title": "Open definition",
+						"anchor": "define",
+						"md": "./lang/en/common/define.md"
+					},
+
+					{
+						"title": "How to open data?",
+						"anchor": "how",
+						"md": "./lang/en/common/how.md"
+					},
+
+					{
+						"title": "Why open data?",
+						"anchor": "why",
+						"md": "./lang/en/common/why.md"
+					}
+				]
+			},
+
+			{
+				"title": "License description",
+				"anchor": "license",
+				"md": "./lang/en/license/description.md",
+
+				"sub": [
+					{
+						"title": "CC0",
+						"anchor": "cc0",
+						"md": "./lang/en/license/CC0.md"
+					},
+
+					{
+						"title": "ODC-BY",
+						"anchor": "odc-by",
+						"md": "./lang/en/license/ODC-BY.md"
+					},
+
+					{
+						"title": "ODbl",
+						"anchor": "odbl",
+						"md": "./lang/en/license/ODbl.md"
+					},
+
+					{
+						"title": "PDDL",
+						"anchor": "pddl",
+						"md": "./lang/en/license/PDDL.md"
+					}
+
+				]
+			},
+
+			{
+				"title": "Reference",
+				"anchor" : "reference",
+				"md": "./lang/en/reference/list.md"
+			}
+		]
+	}
+	
+}]

@@ -4,7 +4,7 @@ call ly for help.
 
 ## Develop
 
-Using [docgr](docgr.github.io/docgr/) to generate HTML files 
+Using [docgr](http://docgr.github.io/docgr/) to generate HTML files 
 
 Install docgr
 

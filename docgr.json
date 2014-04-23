@@ -1,8 +1,53 @@
 [{
-	"layout": "./template/default.hbs",
+	"layout": "./template/home.hbs",
 	"filename": "index.html",
 	"basic": {
 		"url": "index.html",
+		"title": "「123。打。道。掛。」三動作護台灣系列",
+		"og_title": "「123。打。道。掛。」三動作護台灣系列",
+		"og_site_name": "「123。打。道。掛。」三動作護台灣系列",
+		"og_url": "123.g0v.today",
+		"og_description": "「123。打。道。掛。」三動作護台灣系列",
+		"og_image": "/images/step/step1.png",
+		"author": "chilijung",
+		"viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+		"shortcut_icon": "/images/favicon.ico",
+
+		"scripts": [
+			"https://code.jquery.com/jquery-1.11.0.min.js",
+			"//static.addtoany.com/menu/page.js",
+			"//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"
+		],
+
+		"stylesheets": [
+			"http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css",
+			"css/style.css",
+			"css/home.css"
+		],
+
+		"google_analytics": {
+			"UA": "UA-41326468-1", 
+			"url": "g0v.today"
+		},
+
+		"topic": [
+			{
+				"url": "tisa.html",
+				"title": "反服務貿易協定"
+			},
+			{
+				"url": "nonuke.html",
+				"title": "廢核四"
+			}
+		]
+	}
+	
+},
+{
+	"layout": "./template/default.hbs",
+	"filename": "tisa.html",
+	"basic": {
+		"url": "",
 		"title": "「123。打。道。掛。」三動作護台灣",
 		"og_title": "「123。打。道。掛。」三動作護台灣",
 		"og_site_name": "「123。打。道。掛。」三動作護台灣",
@@ -164,7 +209,7 @@
 	"layout": "./template/default.hbs",
 	"filename": "nonuke.html",
 	"basic": {
-		"url": "nonuke.html",
+		"url": "",
 		"title": "123廢核四「打。道。掛。」",
 		"og_title": "123廢核四「打。道。掛。」",
 		"og_site_name": "123廢核四「打。道。掛。」",

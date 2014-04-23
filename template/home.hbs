@@ -1,25 +1,22 @@
+<!DOCTYPE html>
 <html>
   	<head>
 		<title>
-		「123。打。道。掛。」三動作護台灣系列
+		{{title}}
 		</title>
 		<meta charset="utf-8">	
-		<meta property="og:title" content="「123。打。道。掛。」三動作護台灣系列">
-		<meta property="og:site_name" content="「123。打。道。掛。」三動作護台灣系列">
-		<meta property="og:url" content="123.g0v.today">
-		<meta property="og:description" content="「123。打。道。掛。」三動作護台灣系列">
-		<meta property="og:image" content="/images/step/step1.png">
+		<meta property="og:title" content="{{og_title}}">
+		<meta property="og:site_name" content="{{og_site_name}}">
+		<meta property="og:url" content="{{og_url}}">
+		<meta property="og:description" content="{{og_description}}">
+		<meta property="og:image" content="{{og_image}}">
 		<meta property="og:locale" content="zh_TW">
-		<meta name="author" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<link rel="shortcut icon" href="/images/favicon.ico">
-		
-		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-		
-		<link rel="stylesheet" href="css/style.css">
-		
-		<link rel="stylesheet" href="css/home.css">
-		
+		<meta name="author" content="{{og_author}}">
+		<meta name="viewport" content="{{viewport}}">
+		<link rel="shortcut icon" href="{{shortcut_icon}}">
+		{{#each stylesheets}}
+		<link rel="stylesheet" href="{{this}}">
+		{{/each}}
 		
 	</head>
 <body>
@@ -34,21 +31,17 @@
 				<a class="a2a_button_twitter"></a>
 				<a class="a2a_button_google_plus"></a>
 			</div>
-		</div><a href="/index.html" class="logo">「123。打。道。掛。」三動作護台灣系列</a>
+		</div><a href="/{{url}}" class="logo">{{title}}</a>
 	</div>
 
 	<div class="container">
 		<div class="row">
 
-			
-				<a href="/tisa.html">
-					<button type="button" class="btn btn-primary btn-lg btn-block topic">反服務貿易協定</button>
+			{{#each topic}}
+				<a href="/{{url}}">
+					<button type="button" class="btn btn-primary btn-lg btn-block topic">{{title}}</button>
 				</a>
-			
-				<a href="/nonuke.html">
-					<button type="button" class="btn btn-primary btn-lg btn-block topic">廢核四</button>
-				</a>
-			
+			{{/each}}
 		</div>
 	</div>
 	<footer id="footer">
@@ -73,13 +66,9 @@
 			</div>
 		</div>
 	</footer>
-	
-		<script src="https://code.jquery.com/jquery-1.11.0.min.js" defer="defer"></script>
-	
-		<script src="//static.addtoany.com/menu/page.js" defer="defer"></script>
-	
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" defer="defer"></script>
-	
+	{{#each scripts}}
+		<script src="{{this}}" defer="defer"></script>
+	{{/each}}
 	<script>
 		(function (i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
@@ -92,8 +81,7 @@
 			a.src = g;
 			m.parentNode.insertBefore(a, m)
 		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-		ga('create', 'UA-41326468-1', 'g0v.today');
+		ga('create', '{{google_analytics.UA}}', '{{google_analytics.url}}');
 		ga('send', 'pageview');
 	</script>
 </body>
-<script class="jsdom" src="http://code.jquery.com/jquery.min.js"></script></html>

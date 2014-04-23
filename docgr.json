@@ -263,6 +263,11 @@
 				"href": "discuss",
 				"title": "立委怎麼說？經驗分享"
 			},
+
+			{
+				"href": "reference",
+				"title": "參考資料"
+			},
 			{
 				"href": "report",
 				"title": "功能新增與除錯建議"
@@ -271,6 +276,10 @@
 
 		"md_first": [
 			"./md/nonuke/step.md"		
+		],
+
+		"md_end": [
+			"./md/nonuke/reference.md"
 		]
 	}
 	

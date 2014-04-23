@@ -22,6 +22,15 @@ the settings are all in `./docgr.json`
 
 template is in `default.hbs` using `handlebars.js`
 
+-----
+
+For compiling scss to css you can use `gulp`
+
+```
+npm install
+```
+
+to install gulp required packages. And enter gulp in root folder, it will compile all `scss` files in `css` folder to `css`.
 
 ### git submodule
 

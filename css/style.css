@@ -149,13 +149,9 @@ input {
 
 /* CSS Document */
 /*reset*/
-body, h1, h2, h3, h4, h5, h6, ul, ol {
+body {
   margin: 0px;
   padding: 0px; }
-
-p {
-  padding-top: 5px;
-  padding-bottom: 5px; }
 
 .loading {
   margin: 5em; }

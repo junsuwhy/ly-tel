@@ -4,17 +4,24 @@ call ly for help.
 
 ## Develop
 
-You shouldn't modify html file manully, modify jade (in jade folder) and use gulp to generate the html code.
+Using [docgr](docgr.github.io/docgr/) to generate HTML files 
+
+Install docgr
 
 ```
-$ npm install
+sudo npm install -g docgr
 ```
 
-using gulp
+after install docgr, if you want to generate html files, just type.
 
 ```
-$ gulp # this will render html file from jade and scss to css
+docgr ./docgr.json
 ```
+
+the settings are all in `./docgr.json`
+
+template is in `default.hbs` using `handlebars.js`
+
 
 ### git submodule
 

@@ -4,8 +4,8 @@
 
 <ul>
     <li>
-        <a id="link1" href="http://nonuke.today/nonuke2014/http%253A%252F%252Ffortuneteller.bremennetwork.tw%252Fprofile.html" target="_blank">
-            <h4>停建核四、遍地烽火全記錄</h4>
+        <a id="link1" href="http://www.appledaily.com.tw/realtimenews/article/politics/20140424/384982/%E6%9E%97%E7%BE%A9%E9%9B%84%EF%BC%9A%E3%80%8A%E5%85%AC%E6%8A%95%E6%B3%95%E3%80%8B%E4%BF%AE%E5%A5%BD%E3%80%80%E6%A0%B8%E5%9B%9B%E5%85%AC%E6%8A%95%E6%89%8D%E6%9C%89%E6%84%8F%E7%BE%A9" target="_blank">
+            <h4>林義雄：《公投法》修好　核四公投才有意義</h4>
         </a>
     </li>
     <li>

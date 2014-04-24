@@ -267,6 +267,10 @@
 
 		"side_bar": [
 			{
+				"href": "nonuke",
+				"title": "停建核四、遍地烽火全記錄"
+			},
+			{
 				"href": "teach",
 				"title": "三動作",
 				"sub": [
@@ -317,7 +321,7 @@
 				"sub": [
 					{
 						"href": "link1",
-						"title": "停建核四、遍地烽火全記錄"
+						"title": "林義雄：《公投法》修好　核四公投..."
 					},
 					{
 						"href": "link2",

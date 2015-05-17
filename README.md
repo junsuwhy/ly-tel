@@ -53,6 +53,7 @@ $ git submodule update
 - [@IanWang](https://github.com/IanWang)
 - [@shaform](https://github.com/shaform)
 - [@timdream](https://github.com/timdream)
+- [@junsuwhy](https://github.com/junsuwhy)
 
 #### 三動作圖片 License 
 

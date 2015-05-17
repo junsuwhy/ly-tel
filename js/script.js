@@ -226,6 +226,11 @@ if($(window).width()>767){
             $(".sidebar").css("margin-top", 20);
         };
     });
+
+    var $w = $(window);
+    var sbpt = typeof $('.sidebar').css('padding-top') == 'string'?$('.sidebar').css('padding-top').split('px')[0]:0;
+    $('.sidebar').css('height',$w.height());
+    console.log("haha");
 }
 }(window, document, jQuery));
 function clickMenu(){
@@ -243,4 +248,5 @@ $('#menu').click(function(){
 $('.sidebar ul li').click(function(){
     $('#menu').prop("checked", false);
     clickMenu();
+
 });
